@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -41,7 +41,8 @@
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -441,7 +442,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -467,7 +469,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -525,7 +528,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "84wxoth5npGrp6RRXPL88z",
@@ -553,7 +557,8 @@
           "componentImportPath": "@plasmicpkgs/react-scroll-parallax"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "oim27Bu1ThuTn7RkGgxh5P",
@@ -562,20 +567,6 @@
       "version": "latest",
       "cssFilePath": "plasmic/naturalmentemare/plasmic.module.css",
       "components": [
-        {
-          "id": "of49UJebE91W",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
-          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicHomepage.jsx",
-          "importSpec": {
-            "modulePath": "../pages/index.jsx"
-          },
-          "cssFilePath": "plasmic/naturalmentemare/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/"
-        },
         {
           "id": "Yp4SbBaPO1b8",
           "name": "Button2",
@@ -632,18 +623,130 @@
           "componentType": "component"
         },
         {
-          "id": "_eHWE4BWyqEM",
-          "name": "Homepage2",
+          "id": "of49UJebE91W",
+          "name": "Home",
           "type": "managed",
           "projectId": "oim27Bu1ThuTn7RkGgxh5P",
-          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicHomepage2.jsx",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicHome.jsx",
+          "importSpec": {
+            "modulePath": "../pages/index.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicHome.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        },
+        {
+          "id": "_eHWE4BWyqEM",
+          "name": "Team",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicTeam.jsx",
           "importSpec": {
             "modulePath": "../pages/team.jsx"
           },
-          "cssFilePath": "plasmic/naturalmentemare/PlasmicHomepage2.module.css",
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicTeam.module.css",
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/team"
+        },
+        {
+          "id": "7kytgFV7tW4v",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicTextInput.jsx",
+          "importSpec": {
+            "modulePath": "TextInput.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
+        },
+        {
+          "id": "USQM_YP1YWs1",
+          "name": "Select",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicSelect.jsx",
+          "importSpec": {
+            "modulePath": "Select.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicSelect.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "select"
+        },
+        {
+          "id": "7PAc6hA2YJfb",
+          "name": "Select__Option",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicSelect__Option.jsx",
+          "importSpec": {
+            "modulePath": "Select__Option.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicSelect__Option.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "select-option"
+        },
+        {
+          "id": "_nlNlZMZJBL4",
+          "name": "Select__OptionGroup",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicSelect__OptionGroup.jsx",
+          "importSpec": {
+            "modulePath": "Select__OptionGroup.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicSelect__OptionGroup.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "select-option-group"
+        },
+        {
+          "id": "R6O-qo_poZtu",
+          "name": "Select__Overlay",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicSelect__Overlay.jsx",
+          "importSpec": {
+            "modulePath": "Select__Overlay.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicSelect__Overlay.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "triggered-overlay"
+        },
+        {
+          "id": "sn32xTirV1N7",
+          "name": "Attivita",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicAttivita.jsx",
+          "importSpec": {
+            "modulePath": "../pages/attivita.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicAttivita.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/attivita"
+        },
+        {
+          "id": "wVeuoJTCIrIl",
+          "name": "Gallery",
+          "type": "managed",
+          "projectId": "oim27Bu1ThuTn7RkGgxh5P",
+          "renderModuleFilePath": "plasmic/naturalmentemare/PlasmicGallery.jsx",
+          "importSpec": {
+            "modulePath": "../pages/gallery.jsx"
+          },
+          "cssFilePath": "plasmic/naturalmentemare/PlasmicGallery.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/gallery"
         }
       ],
       "icons": [
@@ -716,6 +819,21 @@
           "id": "EA8vzL1yY73j",
           "name": "CircleFilledSvgrepoComsvgIcon",
           "moduleFilePath": "plasmic/naturalmentemare/icons/PlasmicIcon__CircleFilledSvgrepoComsvg.jsx"
+        },
+        {
+          "id": "HpD0948zI2rd",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/naturalmentemare/icons/PlasmicIcon__Searchsvg.jsx"
+        },
+        {
+          "id": "sEcq4-bEXs4d",
+          "name": "ChevronDownsvgIcon",
+          "moduleFilePath": "plasmic/naturalmentemare/icons/PlasmicIcon__ChevronDownsvg.jsx"
+        },
+        {
+          "id": "xUy4LMri7WhU",
+          "name": "ChevronUpsvgIcon",
+          "moduleFilePath": "plasmic/naturalmentemare/icons/PlasmicIcon__ChevronUpsvg.jsx"
         }
       ],
       "images": [
@@ -803,6 +921,11 @@
           "id": "9EEUfXQQwXOz",
           "name": "shifaaz-shamoon-9K9ipjhDdks-unsplash.jpg",
           "filePath": "../public/plasmic/naturalmentemare/images/shifaazShamoon9K9IpjhDdksUnsplashjpg.jpg"
+        },
+        {
+          "id": "ZFE2pFO9VM-4",
+          "name": "image 2",
+          "filePath": "../public/plasmic/naturalmentemare/images/image2.png"
         }
       ],
       "indirect": false,

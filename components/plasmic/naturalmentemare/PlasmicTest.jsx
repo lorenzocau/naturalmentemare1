@@ -12,12 +12,16 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  useCurrentUser
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
+import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
+import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: oim27Bu1ThuTn7RkGgxh5P/projectcss
@@ -50,6 +54,7 @@ function PlasmicTest__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const currentUser = useCurrentUser?.() || {};
   return (
     <React.Fragment>
       <Head>
@@ -198,9 +203,31 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
+function withUsePlasmicAuth(WrappedComponent) {
+  const WithUsePlasmicAuthComponent = props => {
+    const dataSourceCtx = usePlasmicDataSourceContext() ?? {};
+    const { isUserLoading, user, token } = plasmicAuth.usePlasmicAuth({
+      appId: "oim27Bu1ThuTn7RkGgxh5P"
+    });
+    return (
+      <PlasmicDataSourceContextProvider__
+        value={{
+          ...dataSourceCtx,
+          isUserLoading,
+          userAuthToken: token,
+          user
+        }}
+      >
+        <WrappedComponent {...props} />
+      </PlasmicDataSourceContextProvider__>
+    );
+  };
+  return WithUsePlasmicAuthComponent;
+}
+
 export const PlasmicTest = Object.assign(
   // Top-level PlasmicTest renders the root element
-  makeNodeComponent("root"),
+  withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
     columns: makeNodeComponent("columns"),

@@ -10,9 +10,12 @@
 // Component: ZA9Iw5wPW8_J
 import * as React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import {
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
   PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
@@ -20,12 +23,14 @@ import {
   ensureGlobalVariants,
   generateStateOnChangeProp,
   generateStateValueProp,
+  useCurrentUser,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
-import NavBarNaturalmentemare from "../../NavBarNaturalmentemare"; // plasmic-import: ILQN6jAtEyIa/component
-import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
+import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
+import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 import Button2 from "../../Button2"; // plasmic-import: Yp4SbBaPO1b8/component
+import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 import { useScreenVariants as useScreenVariantsith9ZDalCwV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: Ith9ZDalCw-V/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -66,6 +71,7 @@ function PlasmicContattaci__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const currentUser = useCurrentUser?.() || {};
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -162,14 +168,323 @@ function PlasmicContattaci__RenderFunc(props) {
             data-plasmic-override={overrides.section}
             className={classNames(projectcss.all, sty.section)}
           >
-            <NavBarNaturalmentemare
-              data-plasmic-name={"navBarNaturalmentemare"}
-              data-plasmic-override={overrides.navBarNaturalmentemare}
-              className={classNames(
-                "__wab_instance",
-                sty.navBarNaturalmentemare
-              )}
-            />
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__fd7Bx)}
+            >
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__go0OI)}
+              >
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__jq6Rm)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__coadt)}
+                      role={"img"}
+                    />
+                  }
+                  link={`/`}
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__rbboY)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <PlasmicImg__
+                    alt={""}
+                    className={classNames(sty.img__g6JuD)}
+                    displayHeight={"60px"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"none"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"60px"}
+                    onClick={async event => {
+                      const $steps = {};
+                      $steps["goToHomepage"] = true
+                        ? (() => {
+                            const actionArgs = { destination: `/` };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToHomepage"] != null &&
+                        typeof $steps["goToHomepage"] === "object" &&
+                        typeof $steps["goToHomepage"].then === "function"
+                      ) {
+                        $steps["goToHomepage"] = await $steps["goToHomepage"];
+                      }
+                    }}
+                    src={{
+                      src: "/plasmic/naturalmentemare/images/fishingBoatBlackSilhouetteSmallShipsInFlatDesignKidToyStyleIllustrationOnWhiteBackgroundVectorRemovebgPreviewpng.png",
+                      fullWidth: 500,
+                      fullHeight: 500,
+                      aspectRatio: undefined
+                    }}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___5Gg8X
+                    )}
+                  >
+                    {""}
+                  </div>
+                </Button2>
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__vwZko)}
+                >
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__cYaFy)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg___3Svks)}
+                        role={"img"}
+                      />
+                    }
+                    link={`/`}
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg__zvM6M)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__f4K
+                      )}
+                    >
+                      {"Home"}
+                    </div>
+                  </Button2>
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__doK9)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg__wKnMl)}
+                        role={"img"}
+                      />
+                    }
+                    link={`/attivita`}
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg___1SRdS)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__pcOO
+                      )}
+                    >
+                      {"Attivit\u00e0"}
+                    </div>
+                  </Button2>
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__uIba)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg__up8Ea)}
+                        role={"img"}
+                      />
+                    }
+                    link={`/team`}
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg___4VkcW)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__bzwqX
+                      )}
+                    >
+                      {"Chi siamo"}
+                    </div>
+                  </Button2>
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__e778V)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg___9W8Wh)}
+                        role={"img"}
+                      />
+                    }
+                    link={`/gallery`}
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg__p5PX2)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kVvDt
+                      )}
+                    >
+                      {"Gallery"}
+                    </div>
+                  </Button2>
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__oZvzW)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg__b0YXu)}
+                        role={"img"}
+                      />
+                    }
+                    link={`/contatti`}
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg__psUdk)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__hvEvn
+                      )}
+                    >
+                      {"Contatti"}
+                    </div>
+                  </Button2>
+                </Stack__>
+                {false ? (
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___9Gdl)}
+                  >
+                    <button
+                      data-plasmic-name={"button"}
+                      data-plasmic-override={overrides.button}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.button,
+                        projectcss.__wab_text,
+                        sty.button
+                      )}
+                    >
+                      {"Sign up"}
+                    </button>
+                    <Button2
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button2__mIekt
+                      )}
+                      color={"clear"}
+                      endIcon={
+                        <Icon38Icon
+                          className={classNames(projectcss.all, sty.svg__c5Hus)}
+                          role={"img"}
+                        />
+                      }
+                      startIcon={
+                        <ChecksvgIcon
+                          className={classNames(projectcss.all, sty.svg__aqAL)}
+                          role={"img"}
+                        />
+                      }
+                      submitsForm={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__jrEc
+                        )}
+                      >
+                        {"Log in"}
+                      </div>
+                    </Button2>
+                  </div>
+                ) : null}
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__yehaE
+                  )}
+                  component={Link}
+                  href={"https://www.plasmic.app/"}
+                  platform={"nextjs"}
+                >
+                  {""}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__mRypU
+                  )}
+                  component={Link}
+                  href={"https://wa.me/3758002079"}
+                  platform={"nextjs"}
+                  target={"_blank"}
+                >
+                  <Whatsapp128SvgrepoComsvgIcon
+                    className={classNames(projectcss.all, sty.svg__zKfh4)}
+                    role={"img"}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__hh4Tp
+                    )}
+                  >
+                    {" Scrivici su Whatsapp!"}
+                  </div>
+                </PlasmicLink__>
+              </Stack__>
+            </Stack__>
           </section>
           <Stack__
             as={"div"}
@@ -669,10 +984,8 @@ function PlasmicContattaci__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.freeBox__fbV48)}
                 >
                   <PlasmicImg__
-                    data-plasmic-name={"img"}
-                    data-plasmic-override={overrides.img}
                     alt={""}
-                    className={classNames(sty.img)}
+                    className={classNames(sty.img__qVyW)}
                     displayHeight={"40px"}
                     displayMaxHeight={"none"}
                     displayMaxWidth={"none"}
@@ -1115,29 +1428,27 @@ const PlasmicDescendants = {
   root: [
     "root",
     "section",
-    "navBarNaturalmentemare",
+    "button",
     "background2",
     "iframe",
     "foreground",
     "textbox",
     "textbox2",
     "textbox3",
-    "img",
     "foreground2",
     "textbox6",
     "textbox4",
     "textbox7"
   ],
 
-  section: ["section", "navBarNaturalmentemare"],
-  navBarNaturalmentemare: ["navBarNaturalmentemare"],
+  section: ["section", "button"],
+  button: ["button"],
   background2: ["background2"],
   iframe: ["iframe"],
   foreground: ["foreground", "textbox", "textbox2", "textbox3"],
   textbox: ["textbox"],
   textbox2: ["textbox2"],
   textbox3: ["textbox3"],
-  img: ["img"],
   foreground2: ["foreground2", "textbox6", "textbox4", "textbox7"],
   textbox6: ["textbox6"],
   textbox4: ["textbox4"],
@@ -1171,20 +1482,41 @@ function makeNodeComponent(nodeName) {
   return func;
 }
 
+function withUsePlasmicAuth(WrappedComponent) {
+  const WithUsePlasmicAuthComponent = props => {
+    const dataSourceCtx = usePlasmicDataSourceContext() ?? {};
+    const { isUserLoading, user, token } = plasmicAuth.usePlasmicAuth({
+      appId: "oim27Bu1ThuTn7RkGgxh5P"
+    });
+    return (
+      <PlasmicDataSourceContextProvider__
+        value={{
+          ...dataSourceCtx,
+          isUserLoading,
+          userAuthToken: token,
+          user
+        }}
+      >
+        <WrappedComponent {...props} />
+      </PlasmicDataSourceContextProvider__>
+    );
+  };
+  return WithUsePlasmicAuthComponent;
+}
+
 export const PlasmicContattaci = Object.assign(
   // Top-level PlasmicContattaci renders the root element
-  makeNodeComponent("root"),
+  withUsePlasmicAuth(makeNodeComponent("root")),
   {
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
-    navBarNaturalmentemare: makeNodeComponent("navBarNaturalmentemare"),
+    button: makeNodeComponent("button"),
     background2: makeNodeComponent("background2"),
     iframe: makeNodeComponent("iframe"),
     foreground: makeNodeComponent("foreground"),
     textbox: makeNodeComponent("textbox"),
     textbox2: makeNodeComponent("textbox2"),
     textbox3: makeNodeComponent("textbox3"),
-    img: makeNodeComponent("img"),
     foreground2: makeNodeComponent("foreground2"),
     textbox6: makeNodeComponent("textbox6"),
     textbox4: makeNodeComponent("textbox4"),

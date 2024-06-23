@@ -16,7 +16,8 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  useCurrentUser
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Button2 from "../../Button2"; // plasmic-import: Yp4SbBaPO1b8/component
@@ -54,6 +55,7 @@ function PlasmicNavBarNaturalmentemare__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const currentUser = useCurrentUser?.() || {};
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsith9ZDalCwV()
   });
